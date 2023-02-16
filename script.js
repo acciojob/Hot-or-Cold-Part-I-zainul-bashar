@@ -15,10 +15,10 @@ console.log("guess function called")
 function print(inputValue){
 console.log("print function called")
 	if(Math.abs(random-inputValue)<=5){
-		document.getElementById("respond").innerText="hot";
+		document.getElementById("respond").innerText="Hot";
 	}
 	else{
-		document.getElementById("respond").innerText="cold";
+		document.getElementById("respond").innerText="Cold";
 	}
 }
 
