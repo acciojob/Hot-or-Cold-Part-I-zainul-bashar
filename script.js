@@ -1,21 +1,24 @@
 //your code here
 var btn=document.getElementById("btn");
 btn.addEventListener("click",randomNumGenerator);
+var random;
 function randomNumGenerator(){
-	var random=Math.floor(Math.random()*41)-20;
+	random=Math.floor(Math.random()*41)-20;
 	document.getElementById("num").innerText=random;
-	guessNum()
-	print()
+	guessNum();
 }
 function guessNum(){
+console.log("guess function called")
 	var inputValue=Number(document.getElementById("guess").value);
+	print(inputValue);
 }
-function print(){
+function print(inputValue){
+console.log("print function called")
 	if(Math.abs(random-inputValue)<=5){
-		document.getElementByid("respond").innerText="hot";
+		document.getElementById("respond").innerText="hot";
 	}
 	else{
-		document.getElementByid("respond").innerText="cold";
+		document.getElementById("respond").innerText="cold";
 	}
 }
 
